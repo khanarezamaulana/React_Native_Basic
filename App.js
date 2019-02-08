@@ -1,20 +1,27 @@
 import React, { Component } from 'react';
-import { View, Image } from 'react-native';
+import { Container, Header, Left, Body, Right, Title, Icon, Content, Footer, Button, Item, Input, Text } from 'native-base';
 
 class App extends Component {
-
   render(){
     return(
-      <View>
-        <Image
-          style={{width: 200, height: 200}}
-          source={{uri: 'https://as01.epimg.net/en/imagenes/2017/06/07/football/1496834105_053510_1496834232_noticia_normal.jpg'}}
-        />
-        <Image
-          style={{width: 200, height: 200}}
-          source={require('./image/Reza.jpg')}
-        />
-      </View>
+      <Container>
+        <Header searchBar rounded style={{backgroundColor: "yellowgreen"}}>
+          <Item>
+            <Icon name="search"/>
+            <Input placeholder="Search" />
+            <Icon name="contacts" />
+          </Item>
+        </Header>
+        <Content>
+          <Body style={{marginTop: 250}}>
+          <Button iconLeft rounded info>
+            <Icon name="logo-facebook"/>
+            <Text>Klik sini</Text>
+          </Button>
+          </Body>
+        </Content>
+        <Footer></Footer>
+      </Container>
     )
   }
 }
